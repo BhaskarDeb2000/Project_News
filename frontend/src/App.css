@@ -30,9 +30,8 @@
   grid-area: Columns;
   width: 100%;
   background: lightblue;
-  padding: 1rem;
   color: black;
-  height: 100px;
+  height: 80px;
   background-color: #191919;
 }
 
@@ -40,6 +39,7 @@
   grid-area: content;
   background-color: grey;
 }
+
 .aside {
   grid-area: right;
   padding: 1rem;

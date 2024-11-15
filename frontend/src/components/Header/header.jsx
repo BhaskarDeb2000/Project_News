@@ -1,26 +1,29 @@
-import './header.css'
-import logo from '../../assets/LOGO.png'
+import React from 'react';
+import './header.css';
+import logo from '/src/assets/main-logo.png';
 
-function Header() {
+
+const Header = ({ onClickCategory }) => {
     return (
-        <div className="headerbar">
-
-
+        <header className="header">
             <div className="logo">
-                <img src={logo} alt="EduNews Logo" />
-
+                <img src={logo} alt="Logo" className="logo-img" />
             </div>
-            <div className="nav-links">
-                <a href="#">Information-Technology</a>
-                <a href="#">Business</a>
-                <a href="#">Education</a>
+
+            <nav className="navbar">
+                <ul>
+                    <li><button onClick={() => onClickCategory('technology')}>Information Technology</button></li>
+                    <li><button onClick={() => onClickCategory('business')}>Business</button></li>
+                    <li><button onClick={() => onClickCategory('education')}>Education</button></li>
+                </ul>
+            </nav>
+
+            <div className="login">
+                <i className="fas fa-user-circle"></i> <span>Login</span>
             </div>
-            <div className="login">LOGIN</div>
-        </div>
+        </header>
+    );
+};
 
-
-
-    )
-}
 
 export default Header;
