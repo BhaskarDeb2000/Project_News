@@ -13,10 +13,11 @@
 .two {
   display: grid;
   width: 100%;
-  gap: 10px;
+  gap: 30px;
 
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  grid-template-rows: 100px auto auto auto 50px;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 equal columns */
+  grid-template-rows: 10px auto auto auto 50px;
   grid-template-areas:
     "Columns Columns Columns Columns"
     " content content content right"
@@ -25,7 +26,7 @@
     "end end end end";
 }
 
-.Header {
+/* .Header {
   grid-area: Columns;
   width: 100%;
   height: 100px;
@@ -35,17 +36,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .main {
   grid-area: content;
   padding: 2rem;
   /* background-color: grey; */
 }
+
 .aside {
   grid-area: right;
-  padding: 2rem;
-  width: 300px;
+  padding: 5rem 1rem;
+  width: 310px;
 }
 
 .footer {
